@@ -1,0 +1,10 @@
+# 복사해서 application-local.yml 로 저장하고 실제 값 채운 뒤 로컬에서만 사용.
+# application-local.yml 은 .gitignore 에 걸려 있어 깃에 올라가지 않음.
+# 실행 시 --spring.profiles.active=local 옵션으로 활성화.
+
+spring:
+  datasource:
+    password: 실제_DB_비밀번호
+
+kakao:
+  rest-api-key: 카카오_디벨로퍼스_REST_API_키
