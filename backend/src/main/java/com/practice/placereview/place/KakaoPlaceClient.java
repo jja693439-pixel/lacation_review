@@ -19,6 +19,11 @@ public class KakaoPlaceClient {
     private String kakaoApiKey;
 
     public List<PlaceSearchResult> search(String query) {
+        if (kakaoApiKey == null || kakaoApiKey.isBlank()) {
+            throw new IllegalStateException(
+                    "KAKAO_REST_API_KEY가 설정되지 않았습니다. 프로젝트 루트의 .env 파일(.env.example 참고)에 키를 넣어 주세요.");
+        }
+
         KakaoSearchResponse response = restClient.get()
                 .uri(SEARCH_URL + "?query={query}", query)
                 .header("Authorization", "KakaoAK " + kakaoApiKey)
