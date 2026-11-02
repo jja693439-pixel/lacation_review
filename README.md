@@ -46,7 +46,7 @@
 
 ### 사전 준비
 
-- PostgreSQL에 `places_review` 데이터베이스 생성
+- PostgreSQL에 `place_review` 데이터베이스 생성
 - 카카오 디벨로퍼스에서 REST API 키 발급
 
 ### 백엔드
@@ -81,3 +81,4 @@ npm run dev
 ## 진행 상황
 
 - 2026-11-01: 프로젝트 구조 초기 세팅 (backend Spring Boot 스켈레톤, frontend Vite+React+TS 스켈레톤)
+- 2026-11-01: place/review 엔티티, 카카오 장소 검색 연동, 장소 저장 + 후기 CRUD API, React 화면(검색/저장/후기 CRUD) 전부 구현 및 브라우저 동작 확인 완료. 남은 건 (선택) 지도 표시뿐.
